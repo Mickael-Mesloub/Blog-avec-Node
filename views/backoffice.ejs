@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+
+</head>
+<body>
+        <header>
+            <div class="title">
+                <h1>Admin</h1>
+            </div>
+            <div class="navbar">
+                <nav>
+                    
+                    <a href="/">Accueil</a>
+                    <a href="/login">Connexion</a>
+                    <a href="/signup">Créer un compte</a>
+                    <a href="/admin">Administration</a>
+                    
+                    
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div class="desc">
+                <h2>Mes articles</h2>
+                <div class="article-list">
+                    <% articles.forEach(article => { %>
+                        <div class="article-admin">
+                            <h2><%= article.title %></h2>
+                            <p><%= article.content %></p>
+                            <form action="/article/<%= article._id %>/delete" method="post">
+                                <button type="submit">Supprimer</button>
+                            </form>
+                        </div>
+                    <% }) %>
+                    
+                </div>
+                <h2>Ajouter un nouvel article</h2>
+                
+                <form method="post" enctype="multipart/form-data">
+                    
+                    <div class="form-group">
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" id="pseudo" name="pseudo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Titre</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Contenu</label>
+                        <textarea id="content" name="content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="image">
+                    </div>
+                    <div class="form-group">
+                        <button>Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

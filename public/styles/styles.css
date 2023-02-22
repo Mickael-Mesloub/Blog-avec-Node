@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Quicksand:wght@400;700&family=Sofia&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('../images/laponie.jpg') no-repeat;
+    background-size: 100%;
+    background-color: #000;
+    background-position: 50% 75%;
+    height: 300px;
+    padding: 25px;
+}
+
+.title {
+    width: 100%;
+    margin: auto;
+    font-family: 'Sofia';
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+
+h1::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f130";
+    margin-right: 30px;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    font-family: 'Gaegu';
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: rgba(46, 204, 113, .5);
+    box-shadow: 3px 5px 10px #009E60;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #222;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Quicksand';
+}
+
+.desc {
+    margin-left: 2%;
+}
+
+.desc h2 {
+    text-align: center;
+}
+
+.lastArticles {
+    font-family: 'Quicksand';
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    width: 31%;
+    margin: 1%;
+    border: 2px solid #002D62;
+    background-color: #000;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px #662d91;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
+
+
+
+.article-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.article-admin {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid #888ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.delete-btn {
+    padding: 8px;
+    text-align: center;
+    font-family: 'Quicksand';
+    border-radius: 5px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255,0,0,.7);
+}
+
+.form {
+    font-family: 'Quicksand';
+    margin: 20px;
+}
+
+/* ----------- BACKOFFICE ----------     */
+

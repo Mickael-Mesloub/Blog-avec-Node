@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Blog</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h1>Bienvenue</h1>
+            </div>
+            <div class="navbar">
+                <nav>
+                    
+                    <a href="/">Accueil</a>
+                    <a href="/login">Connexion</a>
+                    <a href="/register">Créer un compte</a>
+                    <a href="/admin">Administration</a>
+                    
+                    
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <p><%= locals.user %></p>
+            <div class="desc">
+                <h2>Accueil</h2>
+                <p>Bienvenue sur mon blog!</p>
+            </div>
+            <div class="lastArticles">
+                
+                <h3>Mes articles: </h3>
+                <ul>
+                    <% articles.forEach((e, i) => { %>
+                    <li>
+                        <a href="/article/<%= i %>"><%= e.title %></a></li>
+                    
+                    <% }) %>
+                </ul>
+                
+            </div>
+        </div>
+    </body>
+</html>
